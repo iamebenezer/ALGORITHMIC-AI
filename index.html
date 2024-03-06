@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="/assets/images/coin.jpeg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>ALGORITHMIC AI</title>
 </head>
 <style>
@@ -30,8 +32,27 @@
         font-size: 20px;
         letter-spacing: 2px;
     }
-</style>
+     
+    </style>
 <body>
+    <div class="preloader"></div>
+    <div class="preloader-text">Loading...</div>
+    <script>
+        // Show preloader when the page starts loading
+        window.addEventListener('load', function() {
+          var preloader = document.querySelector('.preloader');
+          var preloaderText = document.querySelector('.preloader-text');
+    
+          preloader.style.display = 'block';
+          preloaderText.style.display = 'block';
+    
+          // Simulate a delay (you can remove this in your actual implementation)
+          setTimeout(function() {
+            preloader.style.display = 'none';
+            preloaderText.style.display = 'none';
+          }, 3000); // Change 3000 to your desired loading time in milliseconds
+        });
+      </script>
     <div class="home" id="home"></div>
     <header class="header">
         <nav class="navbar">
@@ -78,7 +99,8 @@
     <div class="body">
         <!---------------------------- hero-section ----------------
         ------------------------->
-        <section class="hero">
+        <section class="hero" data-aos="fade-up"
+        data-aos-duration="3000">
             <a name="sec"></a>
             <div class="left">
                 <div>
@@ -138,13 +160,13 @@
                             }
                     }
                 </style>
-        <section class="about" id="about">
+        <section class="about" id="about" >
             <img src="assets/images/about-bg.png" alt="logo" class="bg">
             <img src="assets/images/Star1.png" alt="" class="star-1">
             <div class="left">
-                <img src="assets/images/about-img.png" class="spin" alt="">
+                <img src="assets/images/about-img.png" class="" alt="">
             </div>
-            <div class="right">
+            <div class="right" >
                 <h2>About The Project</h2>
                 <p>Algorithmic AI Network integrates layer 2 scaling solutions with privacy bridge dApps, Dex dApps, a staking platform, launchpad, and DeFi functionalities. Its AI utility includes an Ai trading bot/Swap, enabling features like price prediction, fraud detection, risk assessment, market analysis, and ensuring market liquidity.</p>
                 <a href="#" class="btn" style="font-family: head;">Buy Now &#8600</a>
@@ -306,11 +328,14 @@
                 </div>
             </div>
         </footer>
+
         <div class="copyright">
             <p>© Copyright ALGOAI 2024.</p>
         </div>
     </div>
-
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
