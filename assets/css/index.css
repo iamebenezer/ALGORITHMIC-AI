@@ -651,6 +651,7 @@ p {
 
 .roadmap .mob {
     display: none;
+    
 }
 
 .roadmap .rd {
@@ -1068,6 +1069,7 @@ footer .newsletter input {
     }
     .roadmap .mob {
         display: block;
+        margin-bottom: 50px;
     }
     .roadmap .rd {
         width: 100%;
