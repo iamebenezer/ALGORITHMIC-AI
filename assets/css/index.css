@@ -16,33 +16,6 @@ body {
 .body {
     overflow-x: hidden;
 }
-.preloader {
- 
-  background-image: url(/assets/images/gif.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-    width:100%;
-    height: 100vh;
-    animation: spin 2s linear infinite;
-    display: flex; /* Initially hidden */
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  .preloader-text {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-    display: none; /* Initially hidden */
-  }
-
 @font-face {
     font-family: Newake;
     src: url(../fonts/NewakeFont-Demo.otf);
